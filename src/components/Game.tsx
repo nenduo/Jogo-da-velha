@@ -173,16 +173,16 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
     : botToMove
       ? "The bot is weighing its options"
       : mode === "bot"
-        ? "Your move — place an X"
+        ? "Seu movimento — coloque um X"
         : turn === "X"
-          ? "Player one — place an X"
-          : "Player two — place an O";
+          ? "Jogador um — coloque um X"
+          : "Jogador dois — coloque um O";
 
   const bannerMark: Mark = mode === "bot" && turn === botMark ? botMark : turn;
 
   const panelTitle =
-    result?.kind === "draw"
-      ? "A clean stalemate"
+    result?.kind === "Empate"
+      ? "Empate claro"
       : mode === "bot"
         ? result?.mark === humanMark
           ? "Voce venceu"
@@ -213,7 +213,7 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
         </BauButton>
         <Badge className="hidden min-[420px]:inline-flex">
           <span className="inline-block size-2 bg-red" />
-          Bauhaus duel
+          Duelo
         </Badge>
         {mode === "bot" ? (
           <Badge>
@@ -223,7 +223,7 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
         ) : (
           <Badge>
             <span className="inline-block size-2 rounded-full bg-red" />
-            Two players
+            Dois jogadores
           </Badge>
         )}
       </motion.header>
