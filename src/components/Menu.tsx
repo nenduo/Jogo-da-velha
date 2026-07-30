@@ -114,8 +114,8 @@ const DIFFICULTIES: {
   color: string;
 }[] = [
   { id: "casual", label: "Casual", note: "Jogue na vibe", icon: <Circle className="size-3.5" />, color: "bg-yellow" },
-  { id: "sharp", label: "Sharp", note: "ganha e perde", icon: <Triangle className="size-3.5" />, color: "bg-red" },
-  { id: "ruthless", label: "Ruthless", note: "nao perde", icon: <Square className="size-3.5" />, color: "bg-blue" },
+  { id: "sharp", label: "Complicado", note: "ganha e perde", icon: <Triangle className="size-3.5" />, color: "bg-red" },
+  { id: "ruthless", label: "Sem piedade", note: "nao perde", icon: <Square className="size-3.5" />, color: "bg-blue" },
 ];
 
 export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuProps) {
