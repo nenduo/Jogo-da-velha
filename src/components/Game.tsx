@@ -276,7 +276,7 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
             ) : (
               <>
                 <span className={cn("inline-block size-2.5", result?.kind === "win" ? (result?.mark === "X" ? "bg-red" : "bg-blue") : "bg-yellow")} />
-                Round complete
+                Partida completa
               </>
             )}
           </motion.div>
