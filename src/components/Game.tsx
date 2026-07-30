@@ -185,18 +185,18 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
       ? "A clean stalemate"
       : mode === "bot"
         ? result?.mark === humanMark
-          ? "You win"
-          : "The bot wins"
+          ? "Voce venceu"
+          : "A maquina ganhou"
         : result?.mark === "X"
-          ? "Player one wins"
-          : "Player two wins";
+          ? "Jogador um ganhous"
+          : "Jogador 2 ganhou";
 
   const panelNote =
-    result?.kind === "draw"
-      ? "Nine cells, no victor. Perfectly balanced."
+    result?.kind === "empate"
+      ? "Nove celulas, nenhum vencedor. Perfeitamente balanceado."
       : mode === "bot" && result?.mark === botMark
-        ? "The machine celebrates politely."
-        : "Geometry has spoken.";
+        ? "A maquina celebra quieta."
+        : "A geometria falou.";
 
   return (
     <motion.section className="relative z-10 flex min-h-dvh flex-col items-center justify-center gap-5 px-4 py-8 sm:gap-6 sm:px-8">
@@ -379,7 +379,7 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
           )}
         </div>
         <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-ink/40">
-          {mode === "bot" ? "You are X — the bot is O" : "X always goes first"}
+          {mode === "bot" ? "Voce e o x — a maquina e O" : "O X sempre comeca"}
         </p>
       </motion.div>
 
