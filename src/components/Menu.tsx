@@ -129,10 +129,9 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
           {/* top rule */}
           <motion.div variants={rise} className="mb-8 flex w-full items-center justify-between text-[10px] font-bold uppercase tracking-[0.3em] text-ink/55 sm:mb-10">
             <span className="flex items-center gap-2">
-            </span>
             <span className="hidden sm:inline">Forma · Cor · Play</span>
               <span className="inline-block size-2 rounded-full bg-blue" />
-            </span>
+           
           </motion.div>
 
           {/* display title */}
