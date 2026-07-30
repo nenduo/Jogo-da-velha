@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Bauhaus palette on beige paper --- */
+  --color-paper: #efe6d0;
+  --color-cream: #f8f1e1;
+  --color-sand: #e3d5b5;
+  --color-ink: #1a1611;
+  --color-red: #d53a2b;
+  --color-blue: #1e4f9e;
+  --color-yellow: #f0b019;
+
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Black", "Archivo", ui-sans-serif, sans-serif;
+
+  --shadow-press-sm: 4px 4px 0 0 var(--color-ink);
+  --shadow-press: 7px 7px 0 0 var(--color-ink);
+  --shadow-press-lg: 11px 11px 0 0 var(--color-ink);
+
+  --ease-drama: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-yellow);
+  color: var(--color-ink);
+}
+
+/* paper grain */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.055;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.no-touch-callout {
+  user-select: none;
+  -webkit-user-select: none;
+}
