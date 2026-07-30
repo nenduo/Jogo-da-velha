@@ -165,7 +165,7 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
               onSelect={() => onMode("bot")}
               accent="blue"
               icon={<Bot className="size-6" strokeWidth={2.2} />}
-              title="Contra oe Bot"
+              title="Contra o Bot"
               desc="Um pequeno duelo contra uma maquina."
               deco={
                 <svg viewBox="0 0 100 100" className="size-44">
@@ -179,7 +179,7 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
               accent="red"
               icon={<Users className="size-6" strokeWidth={2.2} />}
               title="Contra um Amigo"
-              desc="Passe a tela por ai. tente ai."
+              desc="Se voce tiver um"
               deco={
                 <svg viewBox="0 0 100 100" className="size-44">
                   <rect x={10} y={10} width={80} height={80} fill="currentColor" />
