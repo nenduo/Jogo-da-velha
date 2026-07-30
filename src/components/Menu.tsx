@@ -127,12 +127,12 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
       <div className="w-full max-w-3xl">
         <motion.div variants={container} initial="hidden" animate="show" className="flex flex-col items-center">
           {/* top rule */}
-          <motion.div variants={rise} className="mb-8 flex w-full items-center justify-between text-[10px] font-bold uppercase tracking-[0.3em] text-ink/55 sm:mb-10">
-            <span className="flex items-center gap-2">
-            <span className="hidden sm:inline">Forma · Cor · Play</span>
-              <span className="inline-block size-2 rounded-full bg-blue" />
-           
-          </motion.div>
+  <motion.div variants={rise} className="mb-8 flex w-full items-center justify-between text-[10px] font-bold uppercase tracking-[0.3em] text-ink/55 sm:mb-10">
+  <span className="flex items-center gap-2">
+    <span className="hidden sm:inline">Forma · Cor · Play</span>
+    <span className="inline-block size-2 rounded-full bg-blue" />
+  </span>
+</motion.div>
 
           {/* display title */}
           <h1 className="text-center font-display uppercase leading-[0.92] tracking-tight">
