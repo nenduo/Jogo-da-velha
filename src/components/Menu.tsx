@@ -113,9 +113,9 @@ const DIFFICULTIES: {
   icon: ReactNode;
   color: string;
 }[] = [
-  { id: "casual", label: "Casual", note: "plays for the vibes", icon: <Circle className="size-3.5" />, color: "bg-yellow" },
-  { id: "sharp", label: "Sharp", note: "wins and blocks", icon: <Triangle className="size-3.5" />, color: "bg-red" },
-  { id: "ruthless", label: "Ruthless", note: "cannot be beaten", icon: <Square className="size-3.5" />, color: "bg-blue" },
+  { id: "casual", label: "Casual", note: "Jogue na vibe", icon: <Circle className="size-3.5" />, color: "bg-yellow" },
+  { id: "complicado", label: "Sharp", note: "ganha e perde", icon: <Triangle className="size-3.5" />, color: "bg-red" },
+  { id: "sem piedade", label: "Ruthless", note: "nao perde", icon: <Square className="size-3.5" />, color: "bg-blue" },
 ];
 
 export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuProps) {
@@ -129,12 +129,8 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
           {/* top rule */}
           <motion.div variants={rise} className="mb-8 flex w-full items-center justify-between text-[10px] font-bold uppercase tracking-[0.3em] text-ink/55 sm:mb-10">
             <span className="flex items-center gap-2">
-              <span className="inline-block size-2 bg-red" />
-              Weimar 1923
             </span>
-            <span className="hidden sm:inline">Form · Color · Play</span>
-            <span className="flex items-center gap-2">
-              MMXXVI
+            <span className="hidden sm:inline">Forma · Cor · Play</span>
               <span className="inline-block size-2 rounded-full bg-blue" />
             </span>
           </motion.div>
@@ -142,27 +138,25 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
           {/* display title */}
           <h1 className="text-center font-display uppercase leading-[0.92] tracking-tight">
             <motion.span variants={rise} className="block text-[clamp(3.4rem,13vw,7rem)] text-ink">
-              Tic
+              JOGO
             </motion.span>
             <motion.span variants={rise} className="block text-[clamp(3.4rem,13vw,7rem)] text-red">
-              Tac
+              DA
             </motion.span>
             <motion.span
               variants={rise}
               className="flex items-center justify-center gap-[0.06em] text-[clamp(3.4rem,13vw,7rem)] text-blue"
             >
-              T
-              <motion.span
-                className="inline-block size-[0.72em] rounded-full border-[3px] border-ink bg-yellow"
-                animate={{ scale: [1, 1.08, 1], rotate: [0, 8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              />
-              e
+              V
+              E
+              L
+              H
+              A
             </motion.span>
           </h1>
 
           <motion.p variants={rise} className="mt-5 text-center text-[11px] font-bold uppercase tracking-[0.34em] text-ink/60 sm:text-xs">
-            Nine cells — three forms — one winner
+            nove celulas — tres formas — um vencedor
           </motion.p>
 
           {/* mode cards */}
@@ -172,8 +166,8 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
               onSelect={() => onMode("bot")}
               accent="blue"
               icon={<Bot className="size-6" strokeWidth={2.2} />}
-              title="Vs the Bot"
-              desc="A solo duel against our small mechanical mind."
+              title="Contra oe Bot"
+              desc="Um pequeno duelo contra uma maquina."
               deco={
                 <svg viewBox="0 0 100 100" className="size-44">
                   <circle cx={50} cy={50} r={42} stroke="currentColor" strokeWidth={14} fill="none" />
@@ -185,8 +179,8 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
               onSelect={() => onMode("pvp")}
               accent="red"
               icon={<Users className="size-6" strokeWidth={2.2} />}
-              title="Vs a Friend"
-              desc="Pass the screen back and forth. Settle it here."
+              title="Contra um Amigo"
+              desc="Passe a tela por ai. tente ai."
               deco={
                 <svg viewBox="0 0 100 100" className="size-44">
                   <rect x={10} y={10} width={80} height={80} fill="currentColor" />
@@ -208,7 +202,7 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
               >
                 <div className="pb-1 pt-6 sm:pt-7">
                   <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-ink/55">
-                    Bot temperament
+                    Temperamento do Bot
                   </p>
                   <div className="flex flex-wrap items-stretch justify-center gap-2.5">
                     {DIFFICULTIES.map((d) => {
@@ -252,12 +246,12 @@ export function Menu({ mode, difficulty, onMode, onDifficulty, onStart }: MenuPr
           <motion.div variants={rise} className="mt-10 sm:mt-12">
             <BauButton size="lg" variant="ink" onClick={onStart} className="text-base sm:text-lg">
               <Play className="size-4 fill-current" />
-              Start the game
+              Comece o jogo
             </BauButton>
           </motion.div>
 
           <motion.p variants={rise} className="mt-7 text-[10px] font-bold uppercase tracking-[0.28em] text-ink/40">
-            X marks red · O rings blue
+            X cruz vermelha · O anel azul
           </motion.p>
         </motion.div>
       </div>
