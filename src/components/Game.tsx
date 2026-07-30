@@ -369,12 +369,12 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
         <div className="flex items-center gap-2.5">
           <BauButton size="sm" variant="ghost" onClick={rematch}>
             <RefreshCw className="size-3" />
-            Restart round
+            Recomecar o Round
           </BauButton>
           {anyScore && (
             <BauButton size="sm" variant="ghost" onClick={clearScores}>
               <Trash2 className="size-3" />
-              Clear scores
+              Limpar os pontos
             </BauButton>
           )}
         </div>
