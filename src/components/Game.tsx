@@ -180,23 +180,23 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
 
   const bannerMark: Mark = mode === "bot" && turn === botMark ? botMark : turn;
 
-  const panelTitle =
-    result?.kind === "Empate"
-      ? "Empate claro"
-      : mode === "bot"
-        ? result?.mark === humanMark
-          ? "Voce venceu"
-          : "Empate"
-        : result?.mark === "X"
-          ? "Jogador um ganhou"
-          : "Jogador 2 ganhou";
+const panelTitle =
+  result?.kind === "draw"
+    ? "Empate claro"
+    : mode === "bot"
+      ? result?.mark === humanMark
+        ? "Voce venceu"
+        : "O bot venceu"
+      : result?.mark === "X"
+        ? "Jogador um ganhou"
+        : "Jogador dois ganhou";
 
-  const panelNote =
-    result?.kind === "empate"
-      ? "Nove celulas, nenhum vencedor. Perfeitamente balanceado."
-      : mode === "bot" && result?.mark === botMark
-        ? "A maquina celebra quieta."
-        : "A geometria falou.";
+const panelNote =
+  result?.kind === "draw"
+    ? "Nove celulas, nenhum vencedor. Perfeitamente balanceado."
+    : mode === "bot" && result?.mark === botMark
+      ? "A maquina celebra quieta."
+      : "A geometria falou.";
   return (
     <motion.section className="relative z-10 flex min-h-dvh flex-col items-center justify-center gap-5 px-4 py-8 sm:gap-6 sm:px-8">
       {/* header */}
