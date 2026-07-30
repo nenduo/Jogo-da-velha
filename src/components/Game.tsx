@@ -197,7 +197,7 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
       : mode === "bot" && result?.mark === botMark
         ? "A maquina celebra quieta."
         : "A geometria falou.";
-        : "Nove celulas, nenhum vencedor. Perfeitamente balanceado."
+        : "Nove celulas, nenhum vencedor. Perfeitamente balanceado.";
   return (
     <motion.section className="relative z-10 flex min-h-dvh flex-col items-center justify-center gap-5 px-4 py-8 sm:gap-6 sm:px-8">
       {/* header */}
