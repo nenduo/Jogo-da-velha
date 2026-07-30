@@ -186,7 +186,7 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
       : mode === "bot"
         ? result?.mark === humanMark
           ? "Voce venceu"
-          : "A maquina ganhou"
+          : "Empate"
         : result?.mark === "X"
           ? "Jogador um ganhous"
           : "Jogador 2 ganhou";
