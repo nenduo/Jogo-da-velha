@@ -236,17 +236,17 @@ export function Game({ mode, difficulty, onExit }: GameProps) {
         className="flex items-center gap-2 sm:gap-2.5"
       >
         <ScoreChip
-          label={mode === "bot" ? "You" : "Player one"}
+          label={mode === "bot" ? "Voce" : "Jogador dois"}
           count={scores.X}
           icon={<MiniX className="size-full text-red" />}
         />
         <ScoreChip
-          label="Draws"
+          label="Empates"
           count={scores.D}
           icon={<span className="inline-block size-2.5 rounded-full bg-ink" />}
         />
         <ScoreChip
-          label={mode === "bot" ? "Bot" : "Player two"}
+          label={mode === "bot" ? "Bot" : "Jogador dois"}
           count={scores.O}
           icon={<MiniO className="size-full text-blue" />}
         />
